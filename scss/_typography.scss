@@ -1,0 +1,146 @@
+// Colors
+$ob-blue: #2a525a;
+$ob-blue-light: #596271;
+$ob-red: #a25e47;
+$ob-pink: #c89486;
+$ob-pink-light: #d8c9b4; // Fonts
+
+@font-face {
+	font-family: "BonVivantSerif";
+	src: url("/wp-content/themes/ps-obgyn/fonts/BonVivantSerif.woff") format("woff");
+	/* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FoundersGroteskRegular";
+	src: url("/wp-content/themes/ps-obgyn/fonts/FoundersGroteskRegular.woff") format("woff");
+	/* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "AnnetteBradfordDEMO";
+	src: url("/wp-content/themes/ps-obgyn/fonts/AnnetteBradfordDEMO.woff") format("woff");
+	/* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Igna Sans', sans-serif;
+	src: url("IgnaSans-Black.woff2") format('woff2'), url("IgnaSans-Black.woff") format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@mixin nav-font {
+	font-family: 'Igna Sans', sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+@mixin cursive-font {
+	font-family: 'AnnetteBradfordDEMO';
+}
+
+@mixin serif-font {
+	font-family: 'BonVivantSerif';
+}
+
+@mixin sans-font {
+	font-family: 'FoundersGroteskRegular';
+}
+
+@mixin sans-font-2 {
+	font-family: 'Igna Sans', sans-serif;
+}
+
+.subtitle {
+	font-family: 'Igna Sans', sans-serif;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	letter-spacing: 0.25rem;
+	padding: 15px 80px;
+	font-weight: 600;
+	color: #2a525a;
+
+	@include respond-below(md) {
+		padding: 0;
+		text-align: center;
+	}
+
+	@media (max-width: 375px) {
+		font-size: .75rem;
+	}
+}
+
+.special {
+	@include cursive-font;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+h1 {
+	@include cursive-font;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 72px;
+	line-height: 5rem;
+	color: #2a525a;
+
+	@include respond-below(md) {
+		font-size: 50px;
+	}
+
+	span {
+		font-size: 72px;
+
+		@include respond-below(md) {
+			font-size: 50px;
+		}
+	}
+}
+
+h2 {
+	@include serif-font;
+	font-style: normal;
+	font-size: 34px;
+	color: $ob-red;
+
+	@include respond-below(md) {
+		font-size: 30px;
+	}
+}
+
+h3 {
+	@include cursive-font;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 55px;
+	line-height: 5rem;
+	color: #2a525a;
+
+	@include respond-below(md) {
+		font-size: 40px;
+		text-align: center;
+		line-height: 44px;
+		margin-bottom: 15px;
+	}
+}
+
+p {
+	@include sans-font;
+	font-size: 1.1rem;
+	letter-spacing: 0.020rem;
+	line-height: 2.3rem;
+	font-style: normal;
+	font-weight: 400;
+	color: $ob-blue-light;
+}
