@@ -2977,8 +2977,9 @@ body.page {
 	.nav-box {
 		position: sticky;
 		top: 425px;
-		margin-left: 8%;
 		margin-bottom: 10%;
+		display: inline-block;
+		left: 100px;
 
 		ul {
 			li {

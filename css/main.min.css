@@ -1304,7 +1304,7 @@ body.page{background-color:#fffbf5}
 #due-date-calc{margin-top:50px}
 .page-template-services .header-circle{display:none}
 .services-wrapper{position:relative;margin-top:100px;padding:0}
-.services-wrapper .nav-box{position:-webkit-sticky;position:sticky;top:425px;margin-left:8%;margin-bottom:10%}
+.services-wrapper .nav-box{position:-webkit-sticky;position:sticky;top:425px;margin-bottom:10%;display:inline-block;left:100px}
 .services-wrapper .nav-box ul li{margin:20px 0}
 .services-wrapper .nav-box ul li a{font-family:'BonVivantSerif';color:#a25e47;font-size:20px;-webkit-transition:.3s ease all;transition:.3s ease all;position:relative}
 .services-wrapper .nav-box ul li a:before{width:8px;height:8px;border-radius:50%;position:absolute;top:0;left:-20px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-color:#a25e47;content:"";-webkit-transition:.3s ease all;transition:.3s ease all;opacity:0;-webkit-transform:translateY(-200%);transform:translateY(-200%)}
