@@ -2,8 +2,18 @@ $(document).ready(function () {
   $(".hamburger-menu").click(function () {
     $(this).toggleClass("is-active");
   });
+  $('.service-nav').on('click',function(){
+    $('a').removeClass('active');
+    $(this).addClass('active');
+  });
 });
 
+$(document).ready(function() {
+  $(".service-nav").click(function() {
+    $('.services-inner').fadeOut('250');
+    $('.services-inner#'+$(this).attr('id')).delay('300').fadeIn();
+  });
+});
 
 (function ($) {
   // Scroll navbar
@@ -92,6 +102,10 @@ $(document).ready(function () {
           videoSrc.replace("autoplay=1", "autoplay=0")
         );
       });
+  });
+  $('.service-nav').on('click',function(){
+    $('a').removeClass('active');
+    $(this).addClass('active');
   });
 })(jQuery);
 
