@@ -30,39 +30,28 @@ if ( ! defined( 'ABSPATH' ) ) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" />
 
     <!-- Google Tag Manager -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NNBS6RP');
-    </script>
-    <!-- End Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NNBS6RP');</script>
+        <!-- End Google Tag Manager -->
 
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNBS6RP" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+        <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNBS6RP"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <?php wp_head(); ?>
     <?php astra_head_bottom(); ?>
-    </head>
+</head>
 
-    <body <?php astra_schema_body(); ?> <?php body_class(); ?>>
+<body <?php astra_schema_body(); ?> <?php body_class(); ?>>
 
-        <?php astra_body_top(); ?>
-        <?php wp_body_open(); ?>
-        <div <?php
+    <?php astra_body_top(); ?>
+    <?php wp_body_open(); ?>
+    <div <?php
 	echo astra_attr(
 		'site',
 		array(
@@ -71,22 +60,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 		)
 	);
 	?>>
-            <a class="skip-link screen-reader-text"
-                href="#content"><?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?></a>
+        <a class="skip-link screen-reader-text"
+            href="#content"><?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?></a>
 
 
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="/">
-                    <?php
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">
+                <?php
 				echo file_get_contents( get_theme_file_uri( '/img/ob-nav-logo.svg' ) );
 				?>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <?php
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <?php
 	 	  wp_nav_menu( array(
 	 	  'menu'              => 'main',
 	 	  'theme_location'    => 'primary',
@@ -99,16 +88,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 	  'walker'            => new wp_bootstrap_navwalker())
 	 	  );
 	  ?>
-                </div>
-                <div class="hamburger-menu " data-toggle="modal" data-target="#modalMenu">
-                    <span class="line-1 line"></span>
-                    <span class="line-2 line"></span>
-                    <span class="line-3 line"></span>
-                </div>
-            </nav>
+            </div>
+            <div class="hamburger-menu " data-toggle="modal" data-target="#modalMenu">
+                <span class="line-1 line"></span>
+                <span class="line-2 line"></span>
+                <span class="line-3 line"></span>
+            </div>
+        </nav>
 
 
 
-            <div id="content" class="site-content">
+        <div id="content" class="site-content">
 
-                <div class="ast-container">
+            <div class="ast-container">
