@@ -2980,6 +2980,7 @@ body.page {
 		margin-bottom: 10%;
 		display: inline-block;
 		left: 100px;
+		z-index: 10;
 
 		ul {
 			li {
@@ -3042,12 +3043,6 @@ body.page {
 			}
 		}
 	}
-
-	@media (max-width: 1349px) {
-		display: none;
-	}
-
-
 
 	.services-top {
 		width: 80%;
@@ -3134,16 +3129,137 @@ body.page {
 			}
 		}
 	}
+
+	@media (max-width: 1199px) {
+		//display: none;
+
+		.nav-box {
+			position: relative;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 85vw;
+			margin: 0 auto 2em;
+			max-width: 800px;
+			height: auto;
+			max-height: 82px;
+			overflow: hidden;
+			background: #e7dad3;
+			transition: max-height 0.6s ease;
+
+			&::after {
+				content: '';
+				//arrow
+			}
+
+			&.open {
+				max-height: 350px;
+			}
+
+			a::before, a::after {
+				display: none;
+			}
+
+			ul {
+				text-align: center;
+				margin: 82px 0 0;
+			}
+
+			ul li a {
+				transition: unset;
+			}
+
+			ul li a.active {
+				position: absolute;
+				top: calc(82px / 2);
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin: 0;
+				font-size: calc(max(22px, min(6vw, 32px)));
+				transition: unset;
+				width: 100%;
+			}
+		}
+
+		.services-top {
+			margin: 0 auto;
+			padding: 0;
+			width: 95%;
+			max-width: 600px;
+
+			.divider {
+				display: none;
+			}
+
+			.service-img img {
+				transform: unset;
+				max-width: 400px;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+		.services-bottom {
+			margin: 0 auto;
+			padding: 2em 0;
+
+			.services-bottom-inner {
+				margin: 2em auto;
+				padding: 0;
+				width: 95%;
+				max-width: 600px;
+			}
+		}
+	}
+
+	@media (max-width: 990px) {
+		.services-bottom {
+
+			.divider {
+				margin: 0 auto;
+			}
+
+			.services-bottom-inner .service-list {
+				flex-direction: column;
+				width: 25ch;
+				margin: 0 auto;
+
+				ul.list-unstyled {
+					width: 100%;
+					margin: 0 auto;
+				}
+
+				ul.list-right {
+					margin-top: -0.75em;
+					margin-bottom: 2em;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		.services-bottom {
+			.services-bottom-inner .divider {
+				width: 250px;
+			}
+		}
+	}
 }
 
 
 
-.services-inner#care {
-	display: block
+.services-inner.active {
+	opacity: 1;
+	pointer-events: auto;
+	position: relative;
+	transition: opacity 0.6s ease;
 }
 
 .services-inner {
-	display: none;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transition: unset;
 }
 
 #services-cta {
@@ -3172,5 +3288,12 @@ body.page {
 				background-color: $ob-pink;
 			}
 		}
+	}
+}
+
+/**Services Page**/
+#ob-services {
+	.nav-box {
+
 	}
 }

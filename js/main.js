@@ -2,18 +2,29 @@ $(document).ready(function () {
   $(".hamburger-menu").click(function () {
     $(this).toggleClass("is-active");
   });
+
+  $('.services-inner').eq(0).addClass("active");
+
   $('.service-nav').on('click',function(){
-    $('a').removeClass('active');
+    //$('a').removeClass('active');
+    if ( $(this).hasClass('active') ) {
+      return;
+    }
+    $('.service-nav').removeClass("active");
     $(this).addClass('active');
+    $('.services-inner').removeClass("active");
+    $('.services-inner#'+$(this).attr('id')).addClass("active");
   });
 });
 
-$(document).ready(function() {
+/*$(document).ready(function() {  
   $(".service-nav").click(function() {
     $('.services-inner').fadeOut('250');
     $('.services-inner#'+$(this).attr('id')).delay('300').fadeIn();
   });
-});
+});*/
+
+
 
 (function ($) {
   // Scroll navbar
@@ -103,10 +114,10 @@ $(document).ready(function() {
         );
       });
   });
-  $('.service-nav').on('click',function(){
+  /*$('.service-nav').on('click',function(){ *******duplicate of line 5?
     $('a').removeClass('active');
     $(this).addClass('active');
-  });
+  });*/
 })(jQuery);
 
 $(document).ready(function () {
@@ -149,3 +160,12 @@ function stopVideo2() {
 $('.video-modal').on('hidden.bs.modal', function (e) {
   stopVideo();
 })
+
+//Our Services page
+$('#ob-services .nav-box').click(function() {
+  if ( $('#ob-services .nav-box').hasClass("open") ) {
+    $('#ob-services .nav-box').removeClass("open");
+  } else {
+    $('#ob-services .nav-box').addClass("open");
+  }
+});
