@@ -17,6 +17,8 @@
         </div>
     </div>
     <div class="header-circle"></div>
+
+    <!-- Services Section - DESKTOP ONLY -->
 </section>
 <section id="ob-services">
     <div class="container-fluid services-wrapper">
@@ -152,6 +154,8 @@
         </div>
     </div>
 </section>
+
+
 
 <?php get_template_part('template-parts/cta') ?>
 <?php get_footer(); ?>
