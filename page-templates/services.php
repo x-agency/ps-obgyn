@@ -70,12 +70,12 @@
                             <ul class="list-left list-unstyled">
                                 <?php foreach ($items1 as $item) : ?> <!-- Iterate through first half of array -->
                                     <li><?php echo $item; ?></li>
-                                <? endforeach; ?>
+                                <?php endforeach; ?>
                             </ul>
                             <ul class="list-unstyled list-right">
                                 <?php foreach ($items2 as $item) : ?> <!-- Iterate through second half of array -->
                                     <li><?php echo $item; ?></li>
-                                <? endforeach; ?>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
