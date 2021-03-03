@@ -8,12 +8,13 @@
 
     $hero = get_field('hero');
     $content = get_field('content');
+    $anim_speed = '1.6s';
     ?>
 <?php get_header(); ?>
 
 <section id="page-header">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <h1>
                 <!--span>Contact</span> Us--><?php echo $hero['title']; ?>
             </h1>
@@ -22,7 +23,7 @@
     <!-- <div class="header-circle"></div> -->
 </section>
 <section id="map">
-    <div class="container-fluid map-wrapper">
+    <div class="container-fluid map-wrapper wow animate__fadeIn" data-wow-duration="<?php echo $anim_speed; ?>">
         <div class="map-box">
             <iframe src="https://snazzymaps.com/embed/277525" width="100%" height="700px" style="border:none;"></iframe>
         </div>
@@ -31,7 +32,7 @@
 <section id="contact">
     <div class="container">
         <div class="row contact-wrapper">
-            <div class="col-xl-6 contact-info-wrapper">
+            <div class="col-xl-6 contact-info-wrapper wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="subtitle text-lg-right pr-lg-0"><?php echo $content['title']; ?></div>
                 <div class="divider"></div>
                 <p class="text-large text-lg-right">
@@ -64,7 +65,7 @@
                     <div class="info-text">mon-thurs:8am-4:30pm<br>fri: 8am-12pm</div-->
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6 wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="form-wrapper">
                     <div class="form">
                         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1, 'title' => false, 'description' => false ) ); ?>

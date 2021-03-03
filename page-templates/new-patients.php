@@ -11,12 +11,13 @@
     $cta = get_field('cta');
     $connect = get_field('connect');
 
+    $anim_speed = '1.6s';
     ?>
 <?php get_header(); ?>
 
 <section id="page-header">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <h1><!--span>New</span> Patients--><?php echo $hero['title']; ?></h1>
         </div>
     </div>
@@ -26,7 +27,7 @@
 <section id="new-intro">
     <div class="container-fluid">
         <div class="new-intro-box-wrapper">
-            <div class="new-intro-box">
+            <div class="new-intro-box wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>" data-wow-delay="0.6s">
                 <img class="leaf" src="/wp-content/themes/ps-obgyn/img/home-leaf-2.png" alt="">
                 <h3><?php echo $intro['title']; ?></h3>
                 <div class="divider"></div>
@@ -46,7 +47,7 @@
 </section>
 <section id="new-cta">
     <div class="container">
-        <div class="row cta-block">
+        <div class="row cta-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <div class="col-lg-8">
                 <h3><?php echo $cta['title']; ?></h3>
                 <p><!--Once you've called us and scheduled your first appointment, you'll be directed to complete your
@@ -65,7 +66,7 @@
 <section id="new-connect">
     <div class="container">
         <div class="row connect-wrapper">
-            <div class="col-md-5 connect-text-block">
+            <div class="col-md-5 connect-text-block wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <h3><?php echo $connect['title']; ?></h3>
                 <div class="divider"></div>
                 <p><!--We’re here for you. If you have any concerns or questions about the process or the services we offer,
@@ -74,7 +75,7 @@
                     <a href="<?php echo $connect['link-url']; ?>" class="simple-link"><?php echo $connect['link-text']; ?></a>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="connect-img-block">
                     <div class="gold"><img src="/wp-content/themes/ps-obgyn/img/home-gold-1.png" alt=""></div>
                     <img src="/wp-content/themes/ps-obgyn/img/new-patient-img-2.jpg" alt="">

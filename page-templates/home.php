@@ -5,13 +5,15 @@
     if ( ! defined( 'ABSPATH' ) ) {
       exit; // Exit if accessed directly.
     }
+
+    $anim_speed = '1.6s';
     ?>
 <?php get_header(); ?>
 
 <section id="home-page-header" class="home">
     <div class="home-header">
         <div class="home-inner">
-            <div class="title-block">
+            <div class="title-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                 <h1 class="text-center">You Are <br><span>&nbsp;Extraordinary</span></h1>
                 <h2 class="text-center bold">Live Like It.</h2>
                 <div class="video-play">
@@ -52,19 +54,19 @@
     <div class="container">
         <div class="row home-intro-1">
             <div class="col">
-                <div class="subtitle">modern women. modern care.</div>
+                <div class="subtitle wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">modern women. modern care.</div>
                 <div class="title divider"></div>
             </div>
         </div>
         <div class="row home-intro-2 pl-lg-5">
-            <div class="col-xl-7 column-left">
+            <div class="col-xl-7 column-left wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <p>We’re all so different. So incredible. So exceptional. And we, as women, flourish when surrounded
                     with the love, compassion, and support of those that understand us — our needs, our hopes, our
                     dreams...
                     and our biggest struggles.</p>
                 <p><span>Here at Parkside OB-GYN,<br> we're here for life.</span></p>
             </div>
-            <div class="col column-right">
+            <div class="col column-right wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="img-float">
                     <img src="/wp-content/themes/ps-obgyn/img/home-img-1.jpg" alt="">
                     <div class="leaf"><img src="/wp-content/themes/ps-obgyn/img/home-leaf-1.png" alt=""></div>
@@ -75,10 +77,10 @@
 
         </div>
         <div class="row home-intro-3 pl-lg-5">
-            <div class="col-xl-5 column-left   mt-4 mt-xl-0">
+            <div class="col-xl-5 column-left   mt-4 mt-xl-0 wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div><img src="/wp-content/themes/ps-obgyn/img/home-img-2.jpg" alt=""></div>
             </div>
-            <div class="col-xl-4 offset-md-1 column-right">
+            <div class="col-xl-4 offset-md-1 column-right wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <h3 class="mt-">To us, it's personal.</h3>
                 <div class="divider"></div>
                 <p class="pr-lg-3">Caring for others is very personal to us. It’s about loving, serving, and building a
@@ -97,7 +99,7 @@
     <div class="container-fluid">
         <div class="row approach-outer">
             <div class="col-xl-6 d-flex justify-content-center">
-                <div class="approach-inner">
+                <div class="approach-inner wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                     <div class="approach-content">
                         <div class="approach-leaf"><img src="/wp-content/themes/ps-obgyn/img/home-leaf-2.png" alt="">
                         </div>
@@ -121,7 +123,7 @@
                             are well respected by their peers and their patients. This should give you peace of mind
                             knowing
                             you’re in good hands.</p>
-                        <div class="simple-link mt-5 text-center"><a href="#">See Our Services</a></div>
+                        <div class="simple-link mt-5 text-center"><a href="/services">See Our Services</a></div>
                     </div>
                     <div class="big-circle"></div>
                 </div>
@@ -132,46 +134,46 @@
 </section>
 <section id="services">
     <div class="container">
-        <div class="row mx-0 title justify-content-center">
+        <div class="row mx-0 title justify-content-center wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <h1>What We Offer</h1>
         </div>
-        <div class="row service-icons justify-content-center">
-            <div class="col-6 col-md-2 service-icon-wrapper">
+        <div class="row service-icons justify-content-center wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
+            <a href="/services?active=care" class="col-6 col-md-2 service-icon-wrapper">
                 <div class="icon wow"><?php
 				echo file_get_contents( get_theme_file_uri( '/img/svg/heart.svg' ) );
                 ?></div>
                 <div class="icon-text">General Women's Care</div>
-            </div>
-            <div class="col-6 col-md-2 service-icon-wrapper">
+            </a>
+            <a href="/services?active=pregnancy" class="col-6 col-md-2 service-icon-wrapper">
                 <div class="icon wow"><?php
 				echo file_get_contents( get_theme_file_uri( '/img/svg/pregnant.svg' ) );
                 ?></div>
                 <div class="icon-text">Pregnancy & Postpartum</div>
-            </div>
-            <div class="col-6 col-md-2 service-icon-wrapper">
+            </a>
+            <a href="/services?active=procedures" class="col-6 col-md-2 service-icon-wrapper">
                 <div class="icon wow"><?php
 				echo file_get_contents( get_theme_file_uri( '/img/svg/woman.svg' ) );
                 ?></div>
                 <div class="icon-text">Medical Procedures</div>
-            </div>
-            <div class="col-6 col-md-2 service-icon-wrapper">
+            </a>
+            <a href="/services?active=urgent" class="col-6 col-md-2 service-icon-wrapper">
                 <div class="icon wow"><?php
 				echo file_get_contents( get_theme_file_uri( '/img/svg/patient-bed.svg' ) );
                 ?></div>
                 <div class="icon-text">Urgent Concerns</div>
-            </div>
-            <div class="col-6 col-md-2 service-icon-wrapper">
+            </a>
+            <a href="/services?active=adolescent" class="col-6 col-md-2 service-icon-wrapper">
                 <div class="icon wow"><?php
 				echo file_get_contents( get_theme_file_uri( '/img/svg/patient.svg' ) );
                 ?></div>
                 <div class="icon-text">Adolescent Care</div>
-            </div>
-            <div class="col-6 col-md-2 service-icon-wrapper">
+            </a>
+            <a href="/services?active=wellness" class="col-6 col-md-2 service-icon-wrapper">
                 <div class="icon wow"><?php
 				echo file_get_contents( get_theme_file_uri( '/img/svg/people.svg' ) );
                 ?></div>
                 <div class="icon-text">Sexual Health & Wellness</div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -222,7 +224,3 @@
         </div>
     </div>
 </div>
-
-<script>
-new WOW().init();
-</script>

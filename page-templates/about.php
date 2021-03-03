@@ -13,13 +13,15 @@
 
     $pTitle = get_field('providers-title');
     $providers = get_field('providers');
+
+    $anim_speed = '1.6s';
     ?>
 <?php get_header(); ?>
 
 <section id="page-header">
     <div class="container">
         <div class="row mx-0 justify-content-center">
-            <h1><?php echo $hero['title']; ?></h1>
+            <h1 class="wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>"><?php echo $hero['title']; ?></h1>
         </div>
     </div>
     <div class="header-circle"></div>
@@ -30,21 +32,21 @@
     <div class="container">
         <div class="row about-intro-1">
             <div class="col">
-                <div class="subtitle"><?php echo $hero['sub']; ?></div>
+                <div class="subtitle wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>"><?php echo $hero['sub']; ?></div>
                 <div class="title divider"></div>
             </div>
         </div>
         <div class="row mx-0 about-intro-2 pl-lg-5">
             <div class="col column-left">
 
-                <div class="img-float">
+                <div class="img-float wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                     <img src="/wp-content/themes/ps-obgyn/img/about-img-1.jpg" alt="">
                     <div class="leaf"><img src="/wp-content/themes/ps-obgyn/img/home-leaf-1.png" alt=""></div>
                     <div class="gold"><img src="/wp-content/themes/ps-obgyn/img/home-gold-1.png" alt=""></div>
 
                 </div>
             </div>
-            <div class="col-xl-7 offset-lg-5 pr-lg-0 column-right">
+            <div class="col-xl-7 offset-lg-5 pr-lg-0 column-right wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <p class="text-large">
                     <!--Every woman’s path is so very different and we’re with you for the
                     journey.
@@ -76,7 +78,7 @@
         </div>
         <div class="row about-intro-3 pl-lg-5">
 
-            <div class="col-xl-5  column-left">
+            <div class="col-xl-5  column-left wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <h3><?php echo $intro['title2']; ?></h3>
                 <div class="divider"></div>
                 <div class="text-block">
@@ -97,7 +99,7 @@
                     <a href=""></a>
                 </div>
             </div>
-            <div class="col-xl-6 offset-md-1 column-right   mt-4 mt-xl-0">
+            <div class="col-xl-6 offset-md-1 column-right   mt-4 mt-xl-0 wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div><img src="/wp-content/themes/ps-obgyn/img/about-img-2.jpg" alt=""></div>
             </div>
         </div>
@@ -108,7 +110,7 @@
         <div class="row mx-0">
             <div class="col-lg-6 d-flex align-items-center">
                 <div class="content-block-container">
-                    <div class="content-block">
+                    <div class="content-block wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                         <div class="leaf"><img src="/wp-content/themes/ps-obgyn/img/about-leaf.png" alt=""></div>
                         <h3><?php echo $services['title']; ?></h3>
                         <div class="divider"></div>
@@ -136,7 +138,7 @@
     </div>
 </section>
 <section id="about-video">
-    <div class="container">
+    <div class="container wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
         <div class="row mx-0 justify-content-center">
             <div class="col-md-7">
                 <div class="video-box" data-toggle="modal" data-target="#videoModal">
@@ -155,7 +157,7 @@
 <section id="providers">
     <div class="container">
         <div class="row mx-0">
-            <div class="col text-center mt-lg-0 mt-5">
+            <div class="col text-center mt-lg-0 mt-5 wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                 <h1><?php echo $pTitle; ?></h1>
                 <div class="divider"></div>
             </div>
@@ -175,13 +177,13 @@ if( have_rows('providers') ):
                 $info = get_sub_field('info');
                 $video = get_sub_field('video');
         // Do something...?>
-        <div class="row provider-block">
+        <div class="row provider-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <div class="col-md-5">
                 <div class="provider-img" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">
                     <img src="<?php echo $img; ?>" alt="">
                     <div class="provider-hover">
                         <div class="provider-hover-inner">
-                            <div class="meet-title">Meet <br>Dr.<?php echo $last_name ?><i class="fa fa-play"></i>
+                            <div class="meet-title">Meet <br>Dr. <?php echo $last_name ?><i class="fa fa-play"></i>
                             </div>
                             <div class="divider"></div>
                         </div>
@@ -212,7 +214,7 @@ if( have_rows('providers') ):
                         </button>
                         <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="nofocusvideo"
                                 class="modal-video-frame"
-                                src="https://player.vimeo.com/video/<?php echo $video ?>?autoplay=0&loop=1&color=c89486&title=0&byline=0&portrait=0"
+                                src="https://player.vimeo.com/video/<?php echo $video ?>?autoplay=0&color=c89486&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
                                 allow="autoplay; fullscreen" allowfullscreen></iframe></div>
                         <script src="https://player.vimeo.com/api/player.js"></script>
