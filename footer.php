@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="footer-bottom row">
             <div class="col-12 footer-bottom-wrapper">
-                <div class="footer-text copyright">copyright © 2020 <br>Parkside OB-GYN</div>
+                <div class="footer-text copyright">copyright © 2021 <br>Parkside OB-GYN</div>
                 <div class="footer-text"><a target="_blank"
                         href="https://parksideob-gyn.wpserver.cloud/wp-content/uploads/2020/12/HIPAA_Notice_of_Privacy_Practices_WM2-1.pdf">PRIVACY
                         POLICY</a>
@@ -62,11 +62,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <div class="menu-nav-block-inner">
                             <ul class="list-unstyled">
                                 <li><a href="/">Home</a></li>
-                                <li><a href="/about">Parkside Experience</a></li>
+                                <li><a href="/about">About</a></li>
                                 <!-- <li><a href="/about/#providers">Our Providers</a></li>
                                 <li><a href="">Our Services</a></li> -->
                                 <li><a href="/expecting">Expecting</a></li>
+                                <li><a href="/services">Services</a></li>
                                 <li><a href="/new-patients">New Patients</a></li>
+                                <!--li><a href="/patient-resources">Patient Resources</a></li-->
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                             <div class="link-box"><a target="_blank"
@@ -100,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             </div>
                             <div class="footer-bottom row">
                                 <div class="col-12 footer-bottom-wrapper">
-                                    <div class="footer-text copyright">copyright © 2020 <br>Parkside OB-GYN</div>
+                                    <div class="footer-text copyright">copyright © 2021 <br>Parkside OB-GYN</div>
                                     <div class="footer-text"><a target="_blank"
                                             href="https://parksideob-gyn.wpserver.cloud/wp-content/uploads/2020/12/HIPAA_Notice_of_Privacy_Practices_WM2-1.pdf">PRIVACY
                                             POLICY</a>
@@ -131,7 +133,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wp_footer(); ?>
 <script>
-new WOW().init();
+$(document).ready(function() {
+    wow = new WOW(
+        {
+            boxClass:     'wow',      // default
+            animateClass: 'animate__animated animated', 
+            offset:       0,          // default
+            mobile:       true,       // default
+            live:         true        // default
+        }
+    )
+    wow.init();
+})
 </script>
 </body>
 

@@ -10,6 +10,120 @@ Text Domain: parkside-obgyn
 Template: astra
 */
 
-.test {
-    color: green;
+/**Services Page**/
+.services-wrapper .services-top .subtitle {
+    text-align: left;
+}
+
+.bg-circle {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -7em;
+    transform: translateX(-50%);
+}
+
+.services-wrapper .services-top .service-img img.gold {
+    position: absolute;
+    max-width: 100%;
+    width: 33%;
+    top: -15px;
+    left: -30px;
+}
+
+.services-wrapper .services-top .service-img img.leaf {
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    width: 12.5%;
+}
+
+.service-img {
+    position: relative;
+}
+
+.services-wrapper .services-top .service-img img {
+    transform: unset;
+}
+
+.service-nav {
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    #footer .footer-bottom-wrapper .footer-text {
+        min-width: unset;
+    }
+}
+
+@media (min-width: 1400px) {
+    .services-wrapper .services-top .service-img img.gold {
+        width: 40%;
+        top: -100px;
+        left: -100px;
+    }
+
+    .services-wrapper .services-bottom {
+        margin-top: min(-2.5em, max(-3vw, -10em));
+    }
+}
+
+@media (min-width: 1700px) {
+    .services-wrapper .services-bottom {
+        margin-top: -10em;
+    }
+}
+
+@media (max-width: 1399px) {
+    .services-wrapper .nav-box::after {
+        content: '';
+        width: 12px;
+        height: 10px;
+        position: absolute;
+        top: 2.5em;
+        right: 1em;
+        background: #c89486;
+        clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+        transition: all 0.6s ease;
+    }
+
+    .services-wrapper .nav-box.open::after {
+        transform: scaleY(-1);
+    }
+    
+    .services-wrapper .nav-box ul li a.active {
+        /*padding-right: 1em;*/
+    }
+}
+
+#page {
+    overflow-x: hidden;
+}
+
+/*Modal Menu*/
+.modal .menu-info-block-inner {
+    z-index: 1;
+}
+
+.modal .footer-top {
+    display: none;
+}
+
+/*about page*/
+#about-intro {
+    padding-top: 2.5%;
+}
+
+.meet-mobile {
+    font-size: max(16px, 1.8vw);
+}
+
+/*services page*/
+.page-template-services #content.site-content {
+    overflow: hidden;
+}
+
+/*expecting page*/
+.classes-title + p a {
+    color: #a25e47;
 }
