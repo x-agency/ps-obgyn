@@ -11,12 +11,14 @@
     $partnerships = get_field('partnerships');
 
     $faqTitle = get_field('faq-title');
+
+    $anim_speed = '1.6s';
     ?>
 <?php get_header(); ?>
 
 <section id="page-header">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <h1><?php echo $hero['title']; ?></h1>
         </div>
     </div>
@@ -25,7 +27,7 @@
 <section id="expecting-intro">
     <div class="container">
         <div class="row intro-wrapper">
-            <div class="col-xl-6 text-center">
+            <div class="col-xl-6 text-center wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="img-wrapper">
 
                     <img src="/wp-content/themes/ps-obgyn/img/expecting-img-1.jpg" alt="">
@@ -34,14 +36,14 @@
                 </div>
             </div>
             <div class="col-xl-6 mt-xl-0 mt-5">
-                <div class="m-0 pl-0 subtitle"><?php echo $intro['sub']; ?></div>
+                <div class="m-0 pl-0 subtitle wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>"><?php echo $intro['sub']; ?></div>
                 <div class="divider"></div>
-                <p class="text-large">
+                <p class="text-large wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                     <!--<span>It’s an exciting time!</span> You’re likely feeling a mix of excitement,
                     nerves, and anticipation. But one thing is certain–the moment you meet your new baby will be one of
                     the most beautiful memories of your life.--><?php echo $intro['title']; ?>
                 </p>
-                <p>
+                <p class="wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                     <!--We want to help you cherish every moment of your pregnancy from conception through delivery and
                     beyond. We know how important the relationship is with a family and your provider. We also know that
                     creating a nurturing and supportive environment is key, which is why we designed our facilities and
@@ -59,7 +61,7 @@
 <section id="partnerships">
     <div class="container">
         <div class="row">
-            <div class="col-xl-5 column-left">
+            <div class="col-xl-5 column-left wow animate__fadeInLeft" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="title-block">
                     <h3><?php echo $partnerships['title']; ?></h3>
                     <div class="divider"></div>
@@ -90,7 +92,7 @@
                     with the care of your new baby. --><?php echo $partnerships['body2']; ?>
                 </p>
             </div>
-            <div class="col-xl-7 pl-lg-5">
+            <div class="col-xl-7 pl-lg-5 wow animate__fadeInRight" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div>
                     <img src="/wp-content/themes/ps-obgyn/img/expecting-img-2.jpg" alt="">
                 </div>
@@ -98,11 +100,11 @@
         </div>
         <div class="row p-0">
             <div class="col px-md-3 px-0">
-                <div class="title-block">
+                <div class="title-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                     <h3><?php echo $partnerships['title2']; ?></h3>
                     <div class="divider-2"></div>
                 </div>
-                <div class="list-block">
+                <div class="list-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                     <!--ul>
                         <li><strong>Receive priority booking</strong> when you establish care with Breastfeeding Center
                             of Greenville
@@ -121,7 +123,7 @@
     </div>
 </section>
 <section id="due-date-calc">
-    <div class="container">
+    <div class="container wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
         <div class="row">
             <div class="col-12">
                 <div class="calc-wrapper">
@@ -138,7 +140,7 @@
     </div>
 </section>
 <section id="faq">
-    <div class="container">
+    <div class="container wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
         <div class="row faq-title-block">
             <div class="faq-title"><?php echo $faqTitle; ?></div>
         </div>
@@ -287,8 +289,11 @@
 <section id="classes">
     <div class="container">
         <div class="row">
-            <div class="col text-center">
+            <div class="col text-center wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                 <h1 class="classes-title">Classes</h1>
+                <!--p>All classes require registration, <a href="https://www.eventbrite.com/o/parkside-pediatrics-26831272313">click here</a> to complete this step.</p-->
+                <!--p><strong>In-person classes have been put on hold for the winter months. Please utilize the link above to see what we are offering virtually.</strong></p-->
+                <p><strong>In-person classes have been put on hold for the winter months. Please click the Register buttons to see what we are offering virtually.</strong></p>
             </div>
         </div>
         <div class="row classes-grid">
@@ -300,7 +305,7 @@
                         $link_text = get_sub_field('link-text');
                         $link_url = get_sub_field('link-url'); ?>
 
-            <div class="col-xl-4 classes-grid-item">
+            <div class="col-xl-4 classes-grid-item wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
                 <div class="classes-img w-100">
                     <img src="<?php echo $image; ?>" alt="">
                     <a href="<?php echo $link_url; ?>">
