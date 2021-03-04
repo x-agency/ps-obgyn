@@ -163,27 +163,24 @@
             </div>
         </div>
         <?php
-
-// Check rows exists.
 if( have_rows('providers') ):
    $i = 1;
-    // Loop through rows.
     while( have_rows('providers') ) : the_row();
-
-        // Load sub field value.
         $img = get_sub_field('img');
-            $first_name = get_sub_field('first_name');
-            $last_name = get_sub_field('last_name');
-                $info = get_sub_field('info');
-                $video = get_sub_field('video');
-        // Do something...?>
+        $first_name = get_sub_field('first_name');
+        $last_name = get_sub_field('last_name');
+        $info = get_sub_field('info');
+        $video = get_sub_field('video');
+        $doctor = get_sub_field('doctor');
+        ?>
+        
         <div class="row provider-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <div class="col-md-5">
                 <div class="provider-img" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">
                     <img src="<?php echo $img; ?>" alt="">
                     <div class="provider-hover">
                         <div class="provider-hover-inner">
-                            <div class="meet-title">Meet <br>Dr. <?php echo $last_name ?><i class="fa fa-play"></i>
+                            <div class="meet-title">Meet <br><?php if ($doctor == true) echo 'Dr.'; ?> <?php echo $last_name ?><i class="fa fa-play"></i>
                             </div>
                             <div class="divider"></div>
                         </div>
@@ -193,9 +190,9 @@ if( have_rows('providers') ):
             </div>
             <div class="col-md-7">
                 <div class="meet-mobile" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">Meet
-                    Dr. <?php echo $first_name ?> <?php echo $last_name ?></div>
+                <?php if ($doctor == true) echo 'Dr.'; ?> <?php echo $first_name ?> <?php echo $last_name ?></div>
                 <div class="provider-name">
-                    <h3>Dr. <?php echo $first_name; ?>&nbsp;<?php echo $last_name; ?></h3>
+                    <h3><?php if ($doctor == true) echo 'Dr.'; ?> <?php echo $first_name; ?>&nbsp;<?php echo $last_name; ?></h3>
                     <div class="divider"></div>
                 </div>
                 <div class="provider-text">
