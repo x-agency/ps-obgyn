@@ -202,7 +202,7 @@ if( have_rows('providers') ):
                 <div class="provider-name">
                     <h3>
                         <?php 
-                            if ($doctor == true) echo 'Dr.'; 
+                            if ($doctor == true) echo 'Dr. '; 
                             echo $first_name . ' '; 
                             echo $last_name;
                             if ($title) echo '<span class="title">' . $title . '</span>';
