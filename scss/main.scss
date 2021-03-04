@@ -1138,6 +1138,14 @@ a {
 				}
 			}
 
+			.title {
+				font-size: 0.5em;
+				display: block;
+				font-family: 'FoundersGroteskRegular';
+				position: absolute;
+				top: 3em;
+			}
+
 		}
 
 		.provider-img {
@@ -1248,6 +1256,12 @@ a {
 				height: 1px;
 				background-color: $ob-pink;
 			}
+		}
+	}
+
+	.provider-block:nth-child(odd) {
+		.title {
+			right: 1em;
 		}
 	}
 
@@ -2929,7 +2943,15 @@ body.page {
 	padding: 8px 20px;
 	border-radius: 30px;
 	margin:15px;
-
+	p {
+		text-align: inherit;
+		font-size: inherit;
+		color: inherit;
+		font-weight: inherit;
+		margin: 0;
+		line-height: inherit;
+		letter-spacing: inherit;
+	}
 
 }
 

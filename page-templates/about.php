@@ -172,27 +172,42 @@ if( have_rows('providers') ):
         $info = get_sub_field('info');
         $video = get_sub_field('video');
         $doctor = get_sub_field('doctor');
+        $title = get_sub_field('title');
         ?>
-        
+
         <div class="row provider-block wow animate__fadeInUp" data-wow-duration="<?php echo $anim_speed; ?>">
             <div class="col-md-5">
                 <div class="provider-img" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">
                     <img src="<?php echo $img; ?>" alt="">
                     <div class="provider-hover">
                         <div class="provider-hover-inner">
-                            <div class="meet-title">Meet <br><?php if ($doctor == true) echo 'Dr.'; ?> <?php echo $last_name ?><i class="fa fa-play"></i>
+                            <div class="meet-title">Meet <br><?php if ($doctor == true) { echo 'Dr.'; } else { echo $first_name . "<br>";}?> <?php echo $last_name ?><i class="fa fa-play"></i>
                             </div>
                             <div class="divider"></div>
                         </div>
-
                     </div>
                 </div>
             </div>
             <div class="col-md-7">
-                <div class="meet-mobile" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">Meet
-                <?php if ($doctor == true) echo 'Dr.'; ?> <?php echo $first_name ?> <?php echo $last_name ?></div>
+                <div class="meet-mobile" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">
+                    <p>Meet
+                    <?php 
+                        if ($doctor == true) echo 'Dr. ';
+                        echo $first_name . ' ';
+                        echo $last_name;
+                        if ($title) echo '<br style="display: block;">' . $title;
+                    ?>
+                    </p>
+                </div>
                 <div class="provider-name">
-                    <h3><?php if ($doctor == true) echo 'Dr.'; ?> <?php echo $first_name; ?>&nbsp;<?php echo $last_name; ?></h3>
+                    <h3>
+                        <?php 
+                            if ($doctor == true) echo 'Dr.'; 
+                            echo $first_name . ' '; 
+                            echo $last_name;
+                            if ($title) echo '<span class="title">' . $title . '</span>';
+                        ?>
+                    </h3>
                     <div class="divider"></div>
                 </div>
                 <div class="provider-text">
