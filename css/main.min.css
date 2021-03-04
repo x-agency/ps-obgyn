@@ -1040,7 +1040,7 @@ body{background-color:#fff}
 a:active,a:focus,a:hover{outline:0;border:0;color:#a25e47}
 a{text-decoration:none;color:inherit}
 a:hover{text-decoration:none}
-.home-header{height:100vh;background-size:cover;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;background-image:url("/wp-content/themes/ps-obgyn/img/home-header-img.jpg");position:relative;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.home-header{height:100vh;background-size:cover;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;background-image:url("/wp-content/themes/ps-obgyn/img/home-header-img.jpg");background-position:center;position:relative;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .home-header .home-inner{display:-webkit-box;display:-ms-flexbox;display:flex;width:50%;padding:3%;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .home-header .home-inner .title-block h1{font-size:4.5vw;line-height:4.5vw}
 .home-header .home-inner .title-block h1 span{font-size:5vw}
@@ -2071,7 +2071,7 @@ body.page{background-color:#fffbf5}
 #about-intro .about-intro-2 .column-right p{text-align:right}
 #about-intro .about-intro-2 .column-left{position:absolute;left:-10px;top:175px;width:85%;max-width:100%}
 #about-intro .about-intro-3 .column-right img{margin-top:-150px;-webkit-transform:scale(1.1);transform:scale(1.1)}
-}@media(max-width:1575px) and (min-width:1225px){.navbar{background-color:rgba(255,255,255,0.7);padding:0 30px !important}
+}@media(max-width:1575px) and (min-width:991px){.navbar{background-color:rgba(255,255,255,0.7);padding:0 30px !important}
 }@media(min-width:1682px){#home-intro{width:80%;margin:130px auto 0}
 }@media(max-width:1682px) and (min-width:1549px){#home-intro .home-intro-3 .column-right{margin-top:300px}
 }@media(max-width:1682px) and (min-width:1550px){#services{margin-top:150px}
@@ -2098,6 +2098,8 @@ body.page{background-color:#fffbf5}
 #partnerships .column-left .logos-box a:first-child img{width:75px}
 #partnerships .column-left .logos-box a:last-child img{width:150px}
 .step-link a{font-size:11px;padding:12px 40px}
+}@media(max-width:1450px){#footer .footer-bottom-wrapper,.modal-nav-footer .footer-bottom-wrapper{-ms-flex-wrap:wrap;flex-wrap:wrap}
+#footer .footer-bottom-wrapper .copyright:after,#footer .footer-bottom-wrapper .connect:after,.modal-nav-footer .footer-bottom-wrapper .copyright:after,.modal-nav-footer .footer-bottom-wrapper .connect:after{display:none}
 }@media(max-width:1449px){#about-intro .about-intro-3{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
 }@media(max-width:1399px){.services-wrapper .services-top{width:85%}
 }@media(max-width:1375px){#new-cta .cta-block div{max-width:100%;-webkit-box-flex:1;-ms-flex:auto;flex:auto;text-align:center}
@@ -2113,7 +2115,7 @@ body.page{background-color:#fffbf5}
 .home-header .home-inner .title-block h2{font-size:36px}
 .home-header .header-bottom-bar{position:relative;width:100%}
 .home-header .header-bottom-bar .social .social-link{color:#c89486;font-size:35px}
-.home-header .header-bottom-bar .discover{margin:35px 0 0}
+.home-header .header-bottom-bar .discover{margin:35px 40px 0}
 #home-intro .home-intro-3{width:100%}
 #approach{height:100%;padding:10% 5%}
 #approach .approach-outer .approach-inner{overflow:hidden;width:100%}
@@ -2221,7 +2223,6 @@ h3{font-size:40px;text-align:center;line-height:44px;margin-bottom:15px}
 #footer .footer-text span,.modal-nav-footer .footer-text span{display:none}
 #footer .footer-text,.modal-nav-footer .footer-text{font-size:12px;line-height:24px}
 #footer .footer-bottom-wrapper,.modal-nav-footer .footer-bottom-wrapper{-ms-flex-wrap:wrap;flex-wrap:wrap}
-#footer .footer-bottom-wrapper .copyright:after,#footer .footer-bottom-wrapper .connect:after,.modal-nav-footer .footer-bottom-wrapper .copyright:after,.modal-nav-footer .footer-bottom-wrapper .connect:after{display:none}
 #footer .footer-bottom-wrapper .footer-text .fa,.modal-nav-footer .footer-bottom-wrapper .footer-text .fa{margin:15px 10px}
 .video-modal .modal-dialog{max-width:100%}
 .modal-content .close{top:-50px;right:50%;-webkit-transform:translatex(50%);transform:translatex(50%)}

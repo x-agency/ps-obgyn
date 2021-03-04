@@ -87,6 +87,7 @@ a {
 	align-items: center;
 	justify-content: flex-end;
 	background-image: url("/wp-content/themes/ps-obgyn/img/home-header-img.jpg");
+	background-position: center;
 	position: relative;
 	flex-wrap: wrap;
 
@@ -207,7 +208,7 @@ a {
 			margin: 20px 40px;
 
 			@include respond-below(lg) {
-				margin: 35px 0 0;
+				margin: 35px 40px 0;
 			}
 
 			@media (max-width:375px) {
@@ -2396,6 +2397,10 @@ a {
 		display: flex;
 		justify-content: space-between;
 
+		@media (max-width: 1450px) {
+			flex-wrap: wrap;
+		}
+
 		@include respond-below(md) {
 			flex-wrap: wrap;
 		}
@@ -2426,7 +2431,7 @@ a {
 				position: absolute;
 				bottom: -5px;
 
-				@include respond-below(md) {
+				@media (max-width: 1450px) {
 					display: none;
 				}
 			}
@@ -3156,7 +3161,8 @@ body.page {
 				max-height: 350px;
 			}
 
-			a::before, a::after {
+			a::before,
+			a::after {
 				display: none;
 			}
 
@@ -3293,7 +3299,5 @@ body.page {
 
 /**Services Page**/
 #ob-services {
-	.nav-box {
-
-	}
+	.nav-box {}
 }
