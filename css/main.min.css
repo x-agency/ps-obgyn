@@ -1124,6 +1124,7 @@ a:hover{text-decoration:none}
 #providers h1 span{color:#c89486}
 #providers .divider{width:50%;height:1px;background-color:#c89486;margin:-15px auto 0}
 #providers .provider-block{width:100%;margin:7.5% auto}
+#providers .provider-block .provider-name .title{font-size:.5em;display:block;font-family:'FoundersGroteskRegular';position:absolute;top:3em}
 #providers .provider-block .provider-img{position:relative;margin:15px 0;overflow:hidden}
 #providers .provider-block .provider-img:hover .provider-hover{background-color:rgba(200,148,134,0.85);-webkit-transition:.3s ease all;transition:.3s ease all;cursor:pointer}
 #providers .provider-block .provider-img:hover .provider-hover .provider-hover-inner{opacity:1;-webkit-transition:.3s ease all;transition:.3s ease all;-webkit-transform:translatex(0);transform:translatex(0)}
@@ -1137,6 +1138,7 @@ a:hover{text-decoration:none}
 #providers .provider-block .provider-img .provider-hover .provider-hover-inner .divider{width:60%;background-color:white;height:1px;margin:10px 0 0;-webkit-transition:.3s ease all;transition:.3s ease all;-webkit-transform:translatex(-100px);transform:translatex(-100px)}
 #providers .provider-block .provider-name{display:inline-block;margin:20px 0}
 #providers .provider-block .provider-name .divider{width:100%;height:1px;background-color:#c89486}
+#providers .provider-block:nth-child(odd) .title{right:1em}
 .header-circle{width:50vw;height:50vw;border-radius:50%;background:#a27869;background:-webkit-gradient(linear,left top,left bottom,from(#a27869),color-stop(35%,#c89486),color-stop(68%,#d0c2b5),to(white));background:linear-gradient(180deg,#a27869 0,#c89486 35%,#d0c2b5 68%,white 100%);position:absolute;top:-2%;right:-14%;z-index:0;opacity:.19}
 .page-template #page-header h1{color:#2a525a}
 .page-template #page-header h1 span{color:#c89486}
@@ -1259,7 +1261,7 @@ a:hover{text-decoration:none}
 .modal-menu br{display:block}
 .modal-menu .modal-dialog{width:100%;max-width:100%;margin:0}
 .modal-menu .modal-dialog .modal-content{height:100vh;background-size:cover;background-image:url(/wp-content/themes/ps-obgyn/img/menu-texture.jpg)}
-.modal-menu .modal-dialog .modal-content .modal-menu-wrapper{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;overflow:hidden}
+.modal-menu .modal-dialog .modal-content .modal-menu-wrapper{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;overflow-x:hidden}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner{width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-nav-block{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transition:.3s ease;transition:.3s ease;padding:0 0 0 10%;width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-nav-block .menu-nav-block-inner ul{width:100%;margin:0}
@@ -1268,7 +1270,7 @@ a:hover{text-decoration:none}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:relative}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block:after{content:"";width:60vw;height:60vw;background:#a27869;background:-webkit-gradient(linear,left top,left bottom,from(#a27869),color-stop(35%,#c89486),color-stop(68%,#d0c2b5),to(white));background:linear-gradient(180deg,#a27869 0,#c89486 35%,#d0c2b5 68%,white 100%);opacity:.2;border-radius:50%;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-55%);transform:translate(-50%,-55%);z-index:0}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block .menu-info-block-inner{text-align:right;-webkit-transform:translateY(-150px);transform:translateY(-150px)}
-.modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block .menu-info-block-inner .portal-btn{position:relative;z-index:1;text-align:right;margin:20px 25px 80px;text-transform:uppercase;font-family:'Igna Sans',sans-serif;font-weight:600;letter-spacing:.2rem;font-size:14px}
+.modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block .menu-info-block-inner .portal-btn{position:relative;z-index:1;text-align:right;margin:20px 25px 80px;text-transform:uppercase;font-family:'Igna Sans',sans-serif;font-weight:600;letter-spacing:.2rem;font-size:17px}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block .menu-info-block-inner .portal-btn a{background-color:#29535b;border-radius:30px;color:#e9e6dd;padding:12px 35px}
 .modal-menu .modal-dialog .modal-content .modal-menu-wrapper .modal-menu-inner .menu-info-block .menu-info-block-inner .info-block{font-family:'Igna Sans',sans-serif;color:#29535b;text-transform:uppercase;letter-spacing:.2rem;font-size:20px;font-weight:600;margin:30px;position:relative;z-index:1}
 .modal-backdrop.show{z-index:1}
@@ -1297,6 +1299,7 @@ body.page{background-color:#fffbf5}
 .made-by.footer-text a{font-size:12px;color:#c89486}
 .modal-content .close{position:absolute;right:-35px;color:white;font-family:'lato',sans-serif;font-weight:100;font-size:40px;-webkit-transform:translateY(-35px);transform:translateY(-35px)}
 .meet-mobile{font-family:'Igna Sans',sans-serif;text-align:center;font-size:20px;color:white;font-weight:600;background-color:#c89486;padding:8px 20px;border-radius:30px;margin:15px}
+.meet-mobile p{text-align:inherit;font-size:inherit;color:inherit;font-weight:inherit;margin:0;line-height:inherit;letter-spacing:inherit}
 .video-play{text-align:center}
 .video-play .play-btn{-webkit-transition:.3s ease all;transition:.3s ease all}
 .video-play .play-btn:hover{-webkit-transition:.3s ease all;transition:.3s ease all;cursor:pointer;-webkit-transform:scale(1.1);transform:scale(1.1);filter:drop-shadow(13px 8px 14px rgba(0,0,0,0.27));-webkit-filter:drop-shadow(13px 8px 14px rgba(0,0,0,0.27));-moz-filter:drop-shadow(13px 8px 14px rgba(0,0,0,0.27))}
