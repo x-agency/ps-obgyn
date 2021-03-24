@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <li><a href="/contact">Contact</a></li>
                             </ul>
                             <div class="link-box"><a target="_blank"
-                                    href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=951f587e-f15c-4251-a952-1d16230586f7&ccId=19000101_000001&type=JS&lang=en_US">JOIN
+                                    href="https://www.tribe513.org/join-our-team/">JOIN
                                     OUR TEAM</a></div>
                         </div>
 
