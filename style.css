@@ -127,3 +127,56 @@ Template: astra
 .classes-title + p a {
     color: #a25e47;
 }
+
+/*Portal Button*/
+.portal-btn {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    margin: 20px 25px 80px;
+    text-transform: uppercase;
+    font-family: 'Igna Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    font-size: 17px;
+    background-color: #29535b;
+    border-radius: 30px;
+    color: #e9e6dd;
+    padding: 12px 35px;
+}
+
+#modalMenu .portal-btn {
+    margin: 20px 25px 20px;
+    background-color: #29535b;
+    border-radius: 30px;
+    color: #e9e6dd;
+    padding: 12px 35px;
+    text-align: center;
+}
+
+#modalMenu .portal-btn a {
+    padding: unset;
+    border-radius: unset;
+    background-color: transparent;
+}
+
+#modalMenu .portal-btn + .portal-btn {
+    margin: 20px 25px 40px;
+}
+
+.page-template-contact .portal-btn {
+    margin: 25px auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+@media (min-width: 1200px) {
+    .page-template-contact .portal-btn {
+        margin: 25px 0;
+        margin-left: auto;
+    }
+}
+
+.step-link a {
+    display: inline-block;
+}
