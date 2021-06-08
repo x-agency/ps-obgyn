@@ -80,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="menu-info-block">
                         <div class="menu-info-block-inner">
                             <div class="portal-btn"><a target="_blank" href="https://mycw88.ecwcloud.com/portal11812/jsp/100mp/login_otp.jsp">patient portal</a></div>
-                            <div class="portal-btn"><a target="_blank" href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp">Pay Now</a></div>
+                            <div class="portal-btn"><a target="_blank" href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp">Pay My Bill</a></div>
                             <div class="info-block">525 Verdae Blvd, Suite 150<br> Greenville, SC 29607</div>
                             <div class="info-block">PHONE <a href="tel:8647201900">864.720.1900</a><br>FAX
                                 864.720.1901</a></div>
