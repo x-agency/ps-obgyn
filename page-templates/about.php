@@ -179,13 +179,15 @@ if( have_rows('providers') ):
             <div class="col-md-5">
                 <div class="provider-img" data-toggle="modal" data-target="#docModal-<?php echo $i; ?>">
                     <img src="<?php echo $img; ?>" alt="">
-                    <div class="provider-hover">
-                        <div class="provider-hover-inner">
-                            <div class="meet-title">Meet <br><?php if ($doctor == true) { echo 'Dr.'; } else { echo $first_name . "<br>";}?> <?php echo $last_name ?><i class="fa fa-play"></i>
+                    <?php if ($video != "") : ?>
+                        <div class="provider-hover">
+                            <div class="provider-hover-inner">
+                                <div class="meet-title">Meet <br><?php if ($doctor == true) { echo 'Dr.'; } else { echo $first_name . "<br>";}?> <?php echo $last_name ?><i class="fa fa-play"></i>
+                                </div>
+                                <div class="divider"></div>
                             </div>
-                            <div class="divider"></div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-md-7">
@@ -215,49 +217,51 @@ if( have_rows('providers') ):
                     </p>
                 </div>
             </div>
-            <!-- Doc Video -->
-            <div class="modal video-modal fade" id="docModal-<?php echo $i; ?>" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <?php if ($video != "") : ?>
+                <!-- Doc Video -->
+                <div class="modal video-modal fade" id="docModal-<?php echo $i; ?>" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
 
-                    <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="nofocusvideo"
-                                class="modal-video-frame"
-                                src="https://player.vimeo.com/video/<?php echo $video ?>?autoplay=0&color=c89486&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-                        <script src="https://player.vimeo.com/api/player.js"></script>
-                        <script>
-                        $(document).ready(function() {
-                            // Close modal on button click
-                            $(".menu-item").click(function() {
-                                $("#nav-menu").modal('hide');
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="nofocusvideo"
+                                    class="modal-video-frame"
+                                    src="https://player.vimeo.com/video/<?php echo $video ?>?autoplay=0&color=c89486&title=0&byline=0&portrait=0"
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                                    allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                            <script>
+                            $(document).ready(function() {
+                                // Close modal on button click
+                                $(".menu-item").click(function() {
+                                    $("#nav-menu").modal('hide');
+                                });
                             });
-                        });
 
-                        function stopVideo() {
-                            var $frame = $('iframe#docvideo');
+                            function stopVideo() {
+                                var $frame = $('iframe#docvideo');
 
-                            // saves the current iframe source
-                            var vidsrc = $frame.attr('src');
+                                // saves the current iframe source
+                                var vidsrc = $frame.attr('src');
 
-                            // sets the source to nothing, stopping the video
-                            $frame.attr('src', '');
+                                // sets the source to nothing, stopping the video
+                                $frame.attr('src', '');
 
-                            // sets it back to the correct link so that it reloads immediately on the next window open
-                            $frame.attr('src', vidsrc);
-                        }
+                                // sets it back to the correct link so that it reloads immediately on the next window open
+                                $frame.attr('src', vidsrc);
+                            }
 
-                        $('.video-modal').on('hidden.bs.modal', function(e) {
-                            stopVideo();
-                        })
-                        </script>
+                            $('.video-modal').on('hidden.bs.modal', function(e) {
+                                stopVideo();
+                            })
+                            </script>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
 
         <?php
